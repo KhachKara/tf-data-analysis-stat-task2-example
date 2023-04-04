@@ -7,6 +7,7 @@ chat_id = 42791670 # Ваш chat ID, не меняйте название пер
 
 def solution(p: float, x: np.array) -> tuple:
     alpha = 1 - p
+    n = len(x)
     df = n - 1
     var = np.var(x, ddof=1)
     lower_crit = chi2.ppf(alpha / 2, df)
